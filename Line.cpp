@@ -2,16 +2,16 @@
 
 void Line::CalculateSlope(Point2D point1,Point2D point2)
 {
-	m = (point1.GetY()-point2.GetY())/(point1.GetX()-point2.GetX());
+	m = (point1.GetX()-point2.GetX())/(point.GetY()-point2.GetY());
 }
 
-Line::Line(Point2D point1,Point2D point2)
+Line(Point2D point1,Point2D point2)
 {
 	CalculateSlope(point1,point2);
 	b = -m*point1.GetX()+point1.GetY();
 }
 
-Line::~Line()
+~Line()
 {
 
 }
@@ -26,7 +26,7 @@ double Line::GetB()
 	return b;
 }
 
-Point2D Line:: GetPointViaX(double x)
+Point2D GetPointViaX(int x)
 {
 	return Point2D(x,m*x+b);
 }

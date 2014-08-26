@@ -15,6 +15,5 @@ void main()
 	Point2D point=Projection::GetProjection(first, second, a);
 	cout<<point.GetX()<<" "<<point.GetY()<<endl;
 
-	
 
 }
