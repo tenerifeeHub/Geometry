@@ -4,7 +4,7 @@
 class Line
 {
 	double m, b;
-	CalculateSlope(Point2D point1,Point2D point2);
+	void CalculateSlope(Point2D point1,Point2D point2);
 public:
 	Line(Point2D point1,Point2D point2);
 	~Line();
@@ -12,5 +12,5 @@ public:
 	double Slope();
 	double GetB();
 
-	Point2D GetPointViaX(int x);
+	Point2D GetPointViaX(double x);
 };

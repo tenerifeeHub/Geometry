@@ -171,11 +171,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\Angle.cpp"
+				RelativePath=".\Line.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Inside.cpp"
+				RelativePath=".\Main.cpp"
 				>
 			</File>
 			<File
@@ -186,10 +186,6 @@
 				RelativePath=".\Projection.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\Turn.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -197,15 +193,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Angle.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Inside.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Main.cpp"
+				RelativePath=".\Line.h"
 				>
 			</File>
 			<File
@@ -214,10 +202,6 @@
 			</File>
 			<File
 				RelativePath=".\Projection.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Turn.h"
 				>
 			</File>
 		</Filter>

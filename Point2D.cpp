@@ -18,8 +18,3 @@ double Point2D::GetY()
 Point2D::~Point2D()
 {
 }
-
-Point2D GetPointViaX(int x)
-{
-
-}
