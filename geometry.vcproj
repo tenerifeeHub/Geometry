@@ -179,6 +179,7 @@
 				>
 			</File>
 			<File
+
 				RelativePath=".\Point2D.cpp"
 				>
 			</File>
@@ -193,7 +194,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+
 				RelativePath=".\Line.h"
+
+				RelativePath=".\Angle.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Main.cpp"
+
 				>
 			</File>
 			<File
@@ -202,6 +211,10 @@
 			</File>
 			<File
 				RelativePath=".\Projection.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Turn.h"
 				>
 			</File>
 		</Filter>
