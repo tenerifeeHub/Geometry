@@ -9,4 +9,6 @@ public:
 
 	double GetX();
 	double GetY();
+
+	bool operator==(Point2D point);
 };

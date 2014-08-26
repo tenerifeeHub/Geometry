@@ -179,12 +179,19 @@
 				>
 			</File>
 			<File
-
+				RelativePath=".\Line.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Point2D.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\Projection.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Segment.cpp"
 				>
 			</File>
 			<File
@@ -206,6 +213,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Line.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Main.cpp"
 				>
 			</File>
@@ -215,6 +226,10 @@
 			</File>
 			<File
 				RelativePath=".\Projection.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Segment.h"
 				>
 			</File>
 			<File
