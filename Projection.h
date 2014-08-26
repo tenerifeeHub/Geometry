@@ -1,8 +1,8 @@
 #pragma once
-
+#include "Point2D.h"
+#include "Line.h"
 class Projection
 {
-public:
-	Projection(void);
-	~Projection(void);
+	public:
+		static Point2D GetProjection(Point2D first, Point2D second, Point2D a);
 };
