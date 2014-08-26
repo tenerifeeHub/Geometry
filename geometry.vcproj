@@ -175,10 +175,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Inside.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Point2D.cpp"
 				>
 			</File>
@@ -198,10 +194,6 @@
 			>
 			<File
 				RelativePath=".\Angle.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Inside.h"
 				>
 			</File>
 			<File
