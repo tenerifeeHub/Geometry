@@ -3,8 +3,7 @@
 #include "Turn.h"
 using namespace std;
 
-void main()
-{
+void main() {
 //ex2
 	Point2D p1,p2(3,0),p3(5,0);
 	cout<<Turn::GetTurn(p1,p2,p3);
@@ -14,7 +13,4 @@ void main()
 	Point2D a(42, 41.8890);
 	Point2D point=Projection::GetProjection(first, second, a);
 	cout<<point.GetX()<<" "<<point.GetY()<<endl;
-
-	
-
 }
