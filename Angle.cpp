@@ -1,5 +1,8 @@
 #include <math.h>
+#include <iostream>
 #include "Angle.h"
+
+using namespace std;
 
 #define PI 3.14159265
 
@@ -11,10 +14,23 @@ Angle::~Angle()
 {
 }
 
-float Angle::GetAngle(Point2D a, Point2D b, Point2D c) {
-    float ab = sqrt( (a.GetX()-b.GetX())*(a.GetX()-b.GetX()) + (a.GetY()-b.GetY())*(a.GetY()-b.GetY()) );
-    float ac = sqrt( (a.GetX()-c.GetX())*(a.GetX()-c.GetX()) + (a.GetY()-c.GetY())*(a.GetY()-c.GetY()) );
-    float bc = sqrt( (b.GetX()-c.GetX())*(b.GetX()-c.GetX()) + (b.GetY()-c.GetY())*(b.GetY()-c.GetY()) );
+float getDistance(Point2D a, Point2D b) {
+    float temp = sqrt( (a.GetX()-b.GetX())*(a.GetX()-b.GetX()) + (a.GetY()-b.GetY())*(a.GetY()-b.GetY()) );
+    cout<<"Distance between ("<<a.GetX()<<","<<a.GetY()<<") and ("<<b.GetX()<<","<<b.GetY()<<") is "<<temp<<endl;
+    return temp;
+}
+
+float Angle::GetAngle(Point2D a, Point2D b, Point2D c, Point2D north) {
+    float ab = getDistance(a, b);
+    float ac = getDistance(a, c);
+    float bc = getDistance(b, c);
     float angle = acos( ( (ab*ab) + (ac*ac) - (bc*bc) ) / (2 * ab * ac) ) * 180 / PI;
-    return angle;
+    
+    if( (getDistance(b, north) + getDistance(c, north))/2 < getDistance(a, north) ) {
+        // internal angle
+        return angle;
+    } else {
+        // external angle
+        return (360-angle);
+    }
 }
