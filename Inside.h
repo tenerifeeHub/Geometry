@@ -3,6 +3,5 @@
 class Inside
 {
 public:
-	Inside(void);
-	~Inside(void);
+//	static bool 
 };
