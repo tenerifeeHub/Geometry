@@ -179,6 +179,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Point2D.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Projection.cpp"
 				>
 			</File>
@@ -198,6 +202,14 @@
 			</File>
 			<File
 				RelativePath=".\Inside.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Point2D.h"
 				>
 			</File>
 			<File
