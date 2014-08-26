@@ -1,9 +1,10 @@
 #include "Projection.h"
 
-Projection::Projection(void)
+double Projection::GetSlope()
 {
 }
 
-Projection::~Projection(void)
+double Projection:: GetProjection( double a)
 {
+
 }

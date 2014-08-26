@@ -3,6 +3,6 @@
 class Projection
 {
 public:
-	Projection(void);
-	~Projection(void);
+	static double GetSlope();
+	static double GetProjection(double a);
 };
