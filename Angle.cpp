@@ -16,7 +16,6 @@ Angle::~Angle()
 
 float getDistance(Point2D a, Point2D b) {
     float temp = sqrt( (a.GetX()-b.GetX())*(a.GetX()-b.GetX()) + (a.GetY()-b.GetY())*(a.GetY()-b.GetY()) );
-    cout<<"Distance between ("<<a.GetX()<<","<<a.GetY()<<") and ("<<b.GetX()<<","<<b.GetY()<<") is "<<temp<<endl;
     return temp;
 }
 
