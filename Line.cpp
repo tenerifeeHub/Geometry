@@ -12,6 +12,7 @@ void Line::CalculateSlope(Point2D point1,Point2D point2)
 	if(point1.GetX() == point2.GetX())
 	{
 		isVertical = true;
+		isHorizontal = false;
 		b = point1.GetX();
 	}
 	else

@@ -2,39 +2,29 @@
 #include "Inside.h"
 #include "Projection.h"
 #include "Turn.h"
+#include "OverlapingRectangles.h"
 
 using namespace std;
 
-//bool SegmentsIntersect(Point2D point1,Point2D point2,Point2D point3,point4)
-//{
-//	Line line1(point1,point2);
-//	Line line2(point1,point2);
-//	Point2D intersection;
-//
-//	if(line1.IsVertical())
-//	{
-//		intersection = Inside::VerticalIntersection(line,testLine);
-//	}
-//	else
-//	{
-//		intersection = Inside::Intersection(line,testLine);
-//	}	
-//	Segment polygonSegment1(point1,point2);
-//	Segment polygonSegment2(point3,point4);
-//
-//	return polygonSegment1.ContainsPointInBlock(intersection) && polygonSegment2.ContainsPointInBlock(intersection) ;
-//}
-//
-//bool RectOverlap(Point2D* d1, Point2D* d2)
-//{
-//	for(int i=0;i<3;i++)
-//	{
-//		for(int j=0;j<3;j++)
-//		{
-//			if(
-//		}
-//	}
-//}
+void RectangleOverlapTest()
+{
+	Point2D* drept1 = new Point2D[5];
+
+	drept1[0] = Point2D(3,1);
+	drept1[1] = Point2D(5,1);
+	drept1[2] = Point2D(5,5);
+	drept1[3] = Point2D(3,5);
+
+	Point2D* drept2 = new Point2D[4];
+
+	drept2[0] = Point2D(1,2);
+	drept2[1] = Point2D(7,2);
+	drept2[2] = Point2D(7,4);
+	drept2[3] = Point2D(1,4);
+
+	(OverlapingRectangles::RectOverlap(drept1,drept2))?cout<<"Rectangles overlap":cout<<"Rectangles don't overlap";
+	cout<<endl;
+}
 
 void main()
 {
@@ -59,22 +49,10 @@ void main()
 		}
 		cout<<endl;
 	}
+	delete [] polygon;
 
-	//Point2D* drept1 = new Point2D[4];
+	RectangleOverlapTest();
 
-	//polygon[0] = Point2D(1,1);
-	//polygon[1] = Point2D(1,3);
-	//polygon[2] = Point2D(3,3);
-	//polygon[3] = Point2D(3,1);
-
-	//Point2D* drept2 = new Point2D[4];
-
-	//polygon[0] = Point2D(2,2);
-	//polygon[1] = Point2D(2,4);
-	//polygon[2] = Point2D(3,4);
-	//polygon[3] = Point2D(4,2);
-
-	//cout<<RectOverlap(drept1,drep2);
 //ex2
 	Point2D p1,p2(3,0),p3(5,0);
 	cout<<Turn::GetTurn(p1,p2,p3);
