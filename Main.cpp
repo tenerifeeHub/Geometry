@@ -1,4 +1,6 @@
 #include <iostream>
+
+#include "Angle.h"
 #include "Inside.h"
 #include "Projection.h"
 #include "Turn.h"
@@ -28,38 +30,58 @@ void RectangleOverlapTest()
 
 void main()
 {
-	int n = 5;
+// ex1
+    cout<<"Angle between points"<<endl;
+    Point2D x(1,1), y(2,5), z(3,2), north(2, 6);
+    cout<<Angle::GetAngle(x, y, z, north)<<endl;
 
-	Point2D* polygon = new Point2D[5];
-	polygon[0] = Point2D(1,3);
-	polygon[1] = Point2D(2,3);
-	polygon[2] = Point2D(3,2);
-	polygon[3] = Point2D(4,3);
-	polygon[4] = Point2D(3,4);
+// ex2
+    cout<<endl<<"Get turn"<<endl;
+    Point2D p1,p2(3,0),p3(5,0);
+    cout<<Turn::GetTurn(p1,p2,p3);
 
-	cout<<" \t";
-	for(double j=0;j<4;j += 0.2)
-		cout<<j<<" ";
-	for(double i=0;i<4;i += 0.2)
-	{
-		cout<<i<<"\t";
-		for(double j=0;j<4;j += 0.2)
-		{
-			cout<<Inside::IsInsidePolygon(polygon,n,Point2D(j,i));
-		}
-		cout<<endl;
-	}
+//ex3
+    cout<<endl<<"Get point projection"<<endl;
+    Point2D first(2, -81.559);
+    Point2D second(58, 161.9340);
+    Point2D a(42, 41.8890);
+    Point2D point=Projection::GetProjection(first, second, a);
+    cout<<point.GetX()<<" "<<point.GetY()<<endl;
+
+// ex4
+    cout<<endl<<"If point is inside polygon"<<endl;
+    int n = 5;
+
+    cout.width(4);
+    cout<<" ";
+    Point2D* polygon = new Point2D[5];
+    polygon[0] = Point2D(1,3);
+    polygon[1] = Point2D(2,3);
+    polygon[2] = Point2D(3,2);
+    polygon[3] = Point2D(4,3);
+    polygon[4] = Point2D(3,4);
+
+    for(double j=0;j<4;j += 0.2) {
+        cout.width(4);
+        cout<<j;
+    }
+    cout<<endl;
+    for(double i=0;i<4;i += 0.2)
+    {
+        cout.width(4);
+        cout<<i;
+        for(double j=0;j<4;j += 0.2)
+        {
+            cout.width(4);
+            cout<<(Inside::IsInsidePolygon(polygon,n,Point2D(j,i)) == true ? " " : "1");
+        }
+        cout<<endl;
+    }
 	delete [] polygon;
 
-	RectangleOverlapTest();
+// extra 
 
-//ex2
-	Point2D p1,p2(3,0),p3(5,0);
-	cout<<Turn::GetTurn(p1,p2,p3);
-//ex3
-	Point2D first(2, -81.559);
-	Point2D second(58, 161.9340);
-	Point2D a(42, 41.8890);
-	Point2D point=Projection::GetProjection(first, second, a);
-	cout<<point.GetX()<<" "<<point.GetY()<<endl;
+	RectangleOverlapTest();
+   
+    return 0;
 }
